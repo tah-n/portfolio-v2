@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@600&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@500&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+@import "tailwindcss";
+
+
+@layer base {
+  /* my fonts */
+  @font-face {
+    font-family: "VT323";
+    src: url("/fonts/VT323/VT323-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Press Start 2P";
+    src: url("/fonts/Press_Start_2P/PressStart2P-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Silkscreen-regular";
+    src: url("/fonts/Silkscreen/Silkscreen-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Silkscreen-bold";
+    src: url("/fonts/Silkscreen/Silkscreen-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+
+
+body {
+  margin: 0;
+  background-color: #15021a;
+  height: clamp(400px, 60vh, 90vh);
+}
+
+
+
+@theme {
+  --color-1: #c41fa1;
+  --color-2: #2e012d;
+  --color-3: #DB8DD0;
+  --color-4: #e85ae3;
+  --color-5: #ce5ae8;
+  --color-6: #d105ff;
+  --color-7: #ff05c9;
+  --font-jura: "Jura", sans-serif;
+  --font-noto: "Noto Sans", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-monotone: "Monoton", sans-serif;
+  --font-vt323: "VT323", monospace;
+  --font-pressstart2p: "Press Start 2P", monospace;
+  --font-silkscreenB: "Silkscreen-bold", monospace;
+  --font-silkscreenR: "Silkscreen-regular", monospace;
+}
+
+
+
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.jura {
+  font-family: "Jura", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+/* 300 500 600 700 */
+
+.noto-sans {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+/* 100 to 900 */
+
+@font-face {
+  font-family: cursive;
+  src: url('/public/fonts/BrettleySignatureRegular-RpEMo.ttf');
+}
+
+
+body{
+  @apply font-jura text-white/90;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.trns-text {
+  background: url('../public/works/Screenshot\ 2025-03-30\ 173404.png');
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.monoton {
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.pixel-art {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
