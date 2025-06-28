@@ -26,7 +26,7 @@ const PlanetModel = () => {
      const [ colorMap, normalMap, displacementMap, roughnessMap, aoMap] = useLoader(TextureLoader, [
         '/shinyTexture/ground_0025_color_2k.jpg',
         '/shinyTexture/ground_0025_normal_directx_2k.jpg',
-        '/shinyTexture/ground_0025_height_2k.png',
+        '/shinyTexture/ground_0025_height_1k.png',
         '/shinyTexture/ground_0025_roughness_2k.jpg',
         '/shinyTexture/ground_0025_ao_2k.jpg',
       ]);
@@ -140,6 +140,12 @@ const PlanetModel = () => {
               }
           })
 
+          gsap.ticker.remove(function() {
+            child.rotation.z +=  0.002;
+            child.rotation.x +=  0.001;
+            child.rotation.y +=  0.007;
+            });
+
           
       })
   }
@@ -211,13 +217,10 @@ const PlanetModel = () => {
     },[displayContact,displayWorks])
   
   
-
-
-
   return (
     <>
       <primitive object={planet} ref={groupRef} />
-        <pointLight ref={lightRef} position={[0, 0, 0]} intensity={5} color="#DB8DD0"  />
+        <pointLight ref={lightRef} position={[0, 0, 0]} intensity={5} color="#DB8DD0" castShadow={false} />
         <mesh position={[0,0,0]} ref={starRef} >
           <sphereGeometry ref={sphereRef} args={[ 5, 32, 32]} />
           <meshStandardMaterial
@@ -242,9 +245,9 @@ const PlanetModel = () => {
             />
             </EffectComposer>
           ): null}
-      <pointLight intensity={200} position={[0,0,-60]} color={'#c41fa1'}/>
-      <Cloud ref={cloudRef} position={[0,0,-80]} scale={30} color={'#c41fa1'} seed={20} volume={0.3} opacity={0.05} growth={6}  />
-      <Cloud ref={cloudRef} position={[0,0,-80]} scale={20} color={'#c41fa1'} seed={10} volume={0.2} opacity={0.03} growth={10}  />     
+      <pointLight intensity={200} position={[0,0,-60]} color={'#c41fa1'} castShadow={false} />
+      <Cloud ref={cloudRef} position={[0,0,-80]} scale={30} color={'#c41fa1'} seed={20} volume={0.2} opacity={0.05} growth={4}  />
+      <Cloud ref={cloudRef} position={[0,0,-80]} scale={20} color={'#c41fa1'} seed={10} volume={0.1} opacity={0.03} growth={8}  />     
     </>
   )
 }
