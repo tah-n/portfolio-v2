@@ -24,11 +24,11 @@ const PlanetModel = () => {
 
 
      const [ colorMap, normalMap, displacementMap, roughnessMap, aoMap] = useLoader(TextureLoader, [
-        'models/shinyTexture/ground_0025_color_2k.jpg',
-        'models/shinyTexture/ground_0025_normal_directx_2k.png',
-        'models/shinyTexture/ground_0025_height_2k.png',
-        'models/shinyTexture/ground_0025_roughness_2k.jpg',
-        'models/shinyTexture/ground_0025_ao_2k.jpg',
+        '/shinyTexture/ground_0025_color_2k.jpg',
+        '/shinyTexture/ground_0025_normal_directx_2k.jpg',
+        '/shinyTexture/ground_0025_height_2k.png',
+        '/shinyTexture/ground_0025_roughness_2k.jpg',
+        '/shinyTexture/ground_0025_ao_2k.jpg',
       ]);
       const sunMap = useLoader(TextureLoader, 'models/sun/2k_sun.jpg')
 

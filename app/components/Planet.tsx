@@ -1,5 +1,5 @@
 'use client'
-import React, { Suspense, useEffect } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { Canvas, useLoader, useThree } from '@react-three/fiber';
 import { Cloud, Html, OrbitControls, PerspectiveCamera } from '@react-three/drei';
 import ShatteredPlanet, { Particles } from './ShatteredPlanet';
@@ -21,7 +21,12 @@ import { EffectComposer } from 'three/examples/jsm/Addons.js';
 const Planet = () => {
   const displayProfile = useProps(state => state.displayProfile);
   const displayContact = useProps(state => state.displayContact);
-  const displayWorks = useProps(state => state.displayWorks)
+  const displayWorks = useProps(state => state.displayWorks);
+  const [dpr,setDpr] = useState(1.5);
+
+  useEffect(() => {
+    if(typeof window !== 'undefined') setDpr(Math.min(window.devicePixelRatio, 1.5))
+  },[])
 
 
   return (
@@ -35,7 +40,11 @@ const Planet = () => {
       {displayWorks && (
         <WorksPart />
       )}    
-        <Canvas className='absolute top-0 left-0 h-[100vh]' style={{height: "100vh", width: "100vw"}} >
+        <Canvas 
+          className='absolute top-0 left-0 h-[100vh]' 
+          style={{height: "100vh", width: "100vw"}}
+          dpr={dpr}
+        >
           <PerspectiveCamera makeDefault position={[0,-18,70]} />
           <pointLight color={'#b84da9'} position={[0,10,0]} intensity={10} />
           <ambientLight color={'white'} intensity={0.8} position={[0,30,0]} />
