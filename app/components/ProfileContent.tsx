@@ -8,12 +8,10 @@ import { useStore } from '@react-three/fiber';
 import useProps from './lib/useStore';
 
 const ProfileContent = () => {
-    const text1 = `Hi, I'm Tahere, a frontend developer passionate about creating seamless and engaging digital experiences.`;
+    const text1 = `Hello and Welcome to my portfolio, I'm Tahere, a self-taught front-end developer passionate about creative coding, UI animations, and interactive web experiences.`;
     const words1 = text1.split('');
-    const text2 = 'Originally from chemistry background, I transitioned into web developement through self-learning and hands-on projects.'
+    const text2 = 'Currently studying computer engineering and trying to build new and interesting things on the web using new technologies.'
     const words2 = text2.split('');
-    const text3 = 'Now, I focus on crafting elegant UI solutions using modern frameworks, Always eager to learn and Build something impactful.';
-    const words3 = text3.split('');
     const setDisplayProfile = useProps(state => state.setDisplayProfile)
     
 
@@ -28,9 +26,8 @@ const ProfileContent = () => {
             <div className='w-full h-full'>
                 <ParagraphAnim words={words1} delay={0}/>
                 <br/>
-                <ParagraphAnim words={words2} delay={10} />
+                <ParagraphAnim words={words2} delay={16} />
                 <br/>
-                <ParagraphAnim words={words3} delay={22} />
                 <br/>
             </div>
             
