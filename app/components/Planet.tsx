@@ -43,7 +43,7 @@ const Planet = () => {
         <Canvas 
           className='absolute top-0 left-0 h-[100vh]' 
           style={{height: "100vh", width: "100vw"}}
-          dpr={dpr}
+          dpr={[1, 1.5]}
         >
           <PerspectiveCamera makeDefault position={[0,-18,70]} />
           <pointLight color={'#b84da9'} position={[0,10,0]} intensity={10} />
