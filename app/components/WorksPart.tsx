@@ -43,9 +43,9 @@ const WorksPart = () => {
   return (
     <Container ref={containerRef} closeButton={handleClose} className='' >
       <div className='relative h-[90vh] flex flex-col items-center justify-center' >
-        <WorksText containerRef={containerRef} text='Brain wave' href='https://brain-wave-tau.vercel.app/'     />
-        <WorksText containerRef={containerRef} text='jetBrain' href='https://jet-brains-copy.vercel.app/'   />
-        <WorksText containerRef={containerRef} text='travel Book' href='https://traveling-site-gamma.vercel.app/' />
+        <WorksText containerRef={containerRef} text='Brain wave' href='https://686ced696b523316c6d462b2--dynamic-starship-b68341.netlify.app/'     />
+        <WorksText containerRef={containerRef} text='jetBrain' href='https://686cee54264d872e24a8cf0c--spontaneous-kheer-c3755d.netlify.app/'   />
+        <WorksText containerRef={containerRef} text='travel Book' href='https://686cefe6fdd51b36eda4f52e--ubiquitous-beijinho-461ed2.netlify.app/' />
 
 
         
